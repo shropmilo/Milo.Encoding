@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:Milo.Encoding.Controls"
+             xmlns:miloEnc="clr-namespace:Milo.Encoding"
+             xmlns:views="clr-namespace:Milo.Encoding.Views"
+             x:Class="Milo.Encoding.MainPage">
+
+    <ScrollView>
+
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+
+            <Label Text="Encryption Keys:"></Label>
+            <CollectionView ItemsSource="{Binding Encoders, Source={RelativeSource AncestorType={x:Type miloEnc:MainPage}}}"
+                            SelectedItem="{Binding SelectedEncoder, Source={RelativeSource AncestorType={x:Type miloEnc:MainPage}}}">
+
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Horizontal" ItemSpacing="5"/>
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Border BackgroundColor="DarkGray" Padding="20">
+                            <VerticalStackLayout>
+                                <Label Text="{Binding Title}"/>
+                            </VerticalStackLayout>
+                            <Border.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnKeyTapped" CommandParameter="{Binding}"/>
+                            </Border.GestureRecognizers>
+                        </Border>
+
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+
+            </CollectionView>
+
+
+            <views:EncoderView/>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
