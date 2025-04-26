@@ -1,6 +1,7 @@
 ﻿using Milo.Core;
+using Milo.Core.Services;
 
-namespace Milo.Encoding
+namespace Milo.Apps.Encoding.MAUI
 {
     public partial class App : Application
     {
@@ -16,7 +17,12 @@ namespace Milo.Encoding
 
         protected override void OnStart()
         {
-            MiloCore.Start();
+            var service = IPlatformApplication.Current?.Services.GetService<IMiloServiceManager>();
+            if (service != null)
+            {
+                MiloCore.Start(service);
+            }
+            
             base.OnStart();
         }
     }

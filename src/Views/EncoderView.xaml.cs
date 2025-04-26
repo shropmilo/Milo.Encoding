@@ -1,4 +1,4 @@
-namespace Milo.Encoding.Views;
+namespace Milo.Apps.Encoding.MAUI.Views;
 
 public partial class EncoderView : IMiloSection
 {

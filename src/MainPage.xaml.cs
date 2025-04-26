@@ -1,9 +1,10 @@
 ﻿using System.Collections.ObjectModel;
+using Milo.Apps.Encoding.MAUI.ViewModels;
 using Milo.Core;
 using Milo.Core.Encoding;
-using Milo.Encoding.ViewModels;
+using Milo.Core.MAUI;
 
-namespace Milo.Encoding
+namespace Milo.Apps.Encoding.MAUI
 {
     public interface IMiloSection
     {

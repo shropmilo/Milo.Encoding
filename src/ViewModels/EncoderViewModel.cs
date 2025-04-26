@@ -1,18 +1,12 @@
 ﻿using Milo.Core;
 using Milo.Core.Encoding;
 
-namespace Milo.Encoding.ViewModels
+namespace Milo.Apps.Encoding.MAUI.ViewModels
 {
-    public class EncoderViewModel : PropertyChangedBase
+    public class EncoderViewModel(IEncoderKey key, object title) : PropertyChangedBase
     {
-        public object Title { get; }
+        public object Title { get; } = title;
 
-        public IEncoderKey Key { get; }
-
-        public EncoderViewModel(IEncoderKey key, object title)
-        {
-            Title = title;
-            Key = key;
-        }
+        public IEncoderKey Key { get; } = key;
     }
 }

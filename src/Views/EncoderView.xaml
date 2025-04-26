@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:controls="clr-namespace:Milo.Encoding.Controls"
-             x:Class="Milo.Encoding.Views.EncoderView">
+             xmlns:controls="clr-namespace:Milo.Apps.Encoding.MAUI.Controls"
+             x:Class="Milo.Apps.Encoding.MAUI.Views.EncoderView">
     <VerticalStackLayout Spacing="25">
         <Label Text="Enter message to be encoded:"></Label>
         <controls:MessageEditor/>

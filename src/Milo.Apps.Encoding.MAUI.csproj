@@ -5,7 +5,7 @@
 		<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net9.0-windows10.0.19041.0</TargetFrameworks>
 
 		<OutputType>Exe</OutputType>
-		<RootNamespace>Milo.Encoding</RootNamespace>
+		<RootNamespace>Milo.Apps.Encoding.MAUI</RootNamespace>
 		<UseMaui>true</UseMaui>
 		<SingleProject>true</SingleProject>
 		<ImplicitUsings>enable</ImplicitUsings>
@@ -15,7 +15,7 @@
 		<ApplicationTitle>Milo.Encoding</ApplicationTitle>
 
 		<!-- App Identifier -->
-		<ApplicationId>com.companyname.milo.encoding</ApplicationId>
+		<ApplicationId>com.companyname.milo.apps.encoding.maui</ApplicationId>
 
 		<!-- Versions -->
 		<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
@@ -54,7 +54,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\..\Milo.Core\src\Milo.Core.csproj" />
+	  <ProjectReference Include="..\..\Milo.Controls\src\Milo.Controls.MAUI\Milo.Controls.MAUI.csproj" />
+	  <ProjectReference Include="..\..\Milo.Core\src\Milo.Core.MAUI\Milo.Core.MAUI.csproj" />
+	  <ProjectReference Include="..\..\Milo.Core\src\Milo.Core\Milo.Core.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>

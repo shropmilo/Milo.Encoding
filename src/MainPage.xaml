@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:controls="clr-namespace:Milo.Encoding.Controls"
              xmlns:miloEnc="clr-namespace:Milo.Encoding"
-             xmlns:views="clr-namespace:Milo.Encoding.Views"
-             x:Class="Milo.Encoding.MainPage">
+             xmlns:maui="clr-namespace:Milo.Apps.Encoding.MAUI"
+             xmlns:views="clr-namespace:Milo.Apps.Encoding.MAUI.Views"
+             x:Class="Milo.Apps.Encoding.MAUI.MainPage">
 
     <ScrollView>
 
@@ -13,8 +13,8 @@
             Spacing="25">
 
             <Label Text="Encryption Keys:"></Label>
-            <CollectionView ItemsSource="{Binding Encoders, Source={RelativeSource AncestorType={x:Type miloEnc:MainPage}}}"
-                            SelectedItem="{Binding SelectedEncoder, Source={RelativeSource AncestorType={x:Type miloEnc:MainPage}}}">
+            <CollectionView ItemsSource="{Binding Encoders, Source={RelativeSource AncestorType={x:Type maui:MainPage}}}"
+                            SelectedItem="{Binding SelectedEncoder, Source={RelativeSource AncestorType={x:Type maui:MainPage}}}">
 
                 <CollectionView.ItemsLayout>
                     <LinearItemsLayout Orientation="Horizontal" ItemSpacing="5"/>

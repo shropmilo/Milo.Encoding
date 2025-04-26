@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.Logging;
-using Milo.Core;
+using Milo.Core.MAUI;
 
-namespace Milo.Encoding
+namespace Milo.Apps.Encoding.MAUI
 {
     public static class MauiProgram
     {
